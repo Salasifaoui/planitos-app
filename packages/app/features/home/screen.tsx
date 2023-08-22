@@ -2,14 +2,18 @@ import {
   Anchor,
   Button,
   H1,
+
   Paragraph,
   Separator,
   Sheet,
+  Stack,
   useToastController,
   XStack,
+  Text,
   YStack,
+  Input,
 } from '@my/ui'
-import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
+import { ChevronDown, ChevronUp,Search } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
 
@@ -19,8 +23,25 @@ export function HomeScreen() {
   })
 
   return (
-    <YStack f={1} jc="center" ai="center" p="$4" space>
-      <YStack space="$4" maw={600}>
+    <YStack f={1} ai="center" space>
+      <Stack
+        bc={'#2D6730'}
+        h={200}
+        w={'100%'}
+        borderBottomLeftRadius={'$10'}
+        borderBottomRightRadius={'$10'}
+      />
+      
+          <XStack justifyContent='space-between' ai={'center'} paddingHorizontal={'$4'} bc={'white'} h={50} w={"90%"} position='absolute' t={180}  borderRadius={'$10'}>
+            
+            {/* <Text ta="center" color={'#448E47'}>Search</Text> */}
+            <Input size="$4" bc={'white'} borderWidth={0} w={'70%'} focusable={false} fontWeight={'600'} color={'#448E47'} placeholderTextColor={'#448E47'} placeholder='Search...'/>
+            <Search size={18} color={'#448E47'} />
+          </XStack>
+         
+    
+      {/* <YStack space="$4" maw={700}>
+      
         <H1 ta="center">Welcome to Tamagui.</H1>
         <Paragraph ta="center">
           Here's a basic starter to show navigating from one screen to another. This screen uses the
@@ -49,7 +70,7 @@ export function HomeScreen() {
         <Button {...linkProps}>Link to user</Button>
       </XStack>
 
-      <SheetDemo />
+      <SheetDemo /> */}
     </YStack>
   )
 }

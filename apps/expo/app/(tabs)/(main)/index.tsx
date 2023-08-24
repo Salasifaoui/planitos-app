@@ -1,7 +1,8 @@
-import { HomeScreen } from 'app/features/home/screen'
 import { Stack } from 'expo-router'
 import { Menu } from '@tamagui/lucide-icons'
 import { Button } from 'tamagui'
+import { HomeScreen } from 'app/features/home/screen';
+
 
 export default function Screen() {
   return (

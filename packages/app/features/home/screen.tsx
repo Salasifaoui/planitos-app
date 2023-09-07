@@ -20,6 +20,7 @@ import { useLink } from 'solito/link'
 import CardPlanitos from '../card'
 import { FlatList, Pressable } from 'react-native'
 import { useRouter } from 'solito/router'
+import { light_SheetOverlay } from '../../../theme/src/generated-new';
 
 const data = [
   {
@@ -86,9 +87,10 @@ export function HomeScreen() {
       <SearchBar />
       <YStack space={'$4'} w={'100%'} mt={'$4'} px={'$4'}>
       <XStack  jc={'space-between'} ai={'center'}>
-        <Text fontSize={18}>Recomended</Text>
-        <Button bc={'#2D6730'} borderRadius={'$8'} color={'white'}>
+        <Text fontSize={18} color={'$primary'}>Recomended</Text>
+        <Button bc={'#2D6730'} letterSpacing={'$6'} borderRadius={'$8'} color={'white'}>
           See all
+          
         </Button>
       </XStack>
       <XStack  w={'100%'} mt={'$4'} >

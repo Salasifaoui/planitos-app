@@ -3,13 +3,13 @@ import React from 'react';
 import { Home,Sprout,User,HopOff } from '@tamagui/lucide-icons'
 
 export default function TabLayout(){
-  const color = '#2D6730'
+  const color = '$colors.primary'
    
     return (
         <Tabs 
         screenOptions={{
             headerShown: false,
-            tabBarActiveTintColor: '#82B585',
+            tabBarActiveTintColor: '$colors.background',
         }}
         >
             <Tabs.Screen
@@ -24,7 +24,7 @@ export default function TabLayout(){
       <Tabs.Screen
         name="creatPost"
         options={{
-          title: 'Post',
+          title: 'Plant',
           tabBarIcon: () =>
           <Sprout size={'$2'} color={color} />
             

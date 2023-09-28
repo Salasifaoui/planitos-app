@@ -1,5 +1,4 @@
-import { X } from "@tamagui/lucide-icons";
-import { Text,Image,Button, Card, H2, Paragraph, XStack, YStack } from "tamagui";
+import { Card, Image, Text, XStack, YStack } from "tamagui";
 
 export default function CardPlanitos({name,price,country,image}) {
   return (

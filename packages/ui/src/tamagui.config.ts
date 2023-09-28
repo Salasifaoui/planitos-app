@@ -50,30 +50,24 @@ const bodyFont = createInterFont(
   }
 )
 const token = createTokens({
-  color: {
+  ...tokens,
+  colors: {
     primary: '#2D6730',
     secondary: '#4D9A73',
     focus: '#4D9A73',
     background: '#E8EEEB',
     surface: '#fff',
+    transparent: 'transparent',
+    price: '#135517',
     error: '#000',
     success: '#2D6730',
     warning: '#000',
     info: '#000',
     disabled: '#000',
   },
-  space: {},
-  size: {},
-  radius: {},
-  zIndex: {}
+
 })
-const light = createTheme({
-  color: token.color.primary,
-  // space: tokens.space,
-  // size: tokens.size,
-  // radius: tokens.radius,
-  // zIndex: tokens.zIndex,
-})
+
 
 export const config = createTamagui({
   defaultFont: 'body',
@@ -86,8 +80,9 @@ export const config = createTamagui({
     body: bodyFont,
     heading: headingFont,
   },
+  tokens: token,
   themes,
-  tokens,
+  
   media: createMedia({
     xs: { maxWidth: 660 },
     sm: { maxWidth: 800 },

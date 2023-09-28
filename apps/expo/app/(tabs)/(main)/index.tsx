@@ -11,7 +11,7 @@ export default function Screen() {
         options={{
           title: '',
           headerStyle: {
-            backgroundColor: '#2D6730',
+            backgroundColor: '$colors.primary',
           },
           headerTitleAlign: 'center',
           headerTintColor: '#fff',
